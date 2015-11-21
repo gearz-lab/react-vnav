@@ -32,6 +32,7 @@
     "bootstrap": "^3.3.5",
     "child-process-promise": "^1.1.0",
     "css-loader": "^0.19.0",
+    "extract-text-webpack-plugin": "^0.9.1",
     "fs-extra-promise": "^0.3.1",
     "json-loader": "^0.5.3",
     "less": "^2.5.3",
