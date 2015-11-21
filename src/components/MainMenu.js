@@ -1,4 +1,5 @@
-var React = require("react/addons");
+var React = require("react");
+import update from 'react-addons-update';
 var MainMenuItem = require("./MainMenuItem.js");
 var gearzMixin = require("./mixin.js");
 
@@ -146,7 +147,7 @@ var MainMenu = React.createClass({
     onNodeChange: function (eventObject) {
         function mergeOrCreate(previousValue) {
             return function (value) {
-                return React.addons.update(typeof value != 'object' ? {} : value, previousValue);
+                return update(typeof value != 'object' ? {} : value, previousValue);
             };
         }
 
@@ -166,7 +167,7 @@ var MainMenu = React.createClass({
         }, setter);
 
         // determining what is the new state
-        let newState = React.addons.update(this.state, {nodesCache: merger.nodes});
+        let newState = update(this.state, {nodesCache: merger.nodes});
         this.setState(newState);
 
         // calling external event handlers
