@@ -1,0 +1,40 @@
+{
+  "name": "react-vnav",
+  "version": "1.0.0",
+  "description": "A React menu component compatible with react-router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gearz-lab/react-vnav.git"
+  },
+  "keywords": [
+    "react",
+    "navigation",
+    "react-router",
+    "menu"
+  ],
+  "author": "Andre Pena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gearz-lab/react-vnav/issues"
+  },
+  "homepage": "https://github.com/gearz-lab/react-vnav#readme",
+  "devDependencies": {
+    "child-process-promise": "^1.1.0",
+    "fs-extra-promise": "^0.3.1",
+    "rimraf-promise": "^2.0.0",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "history": "^1.13.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.0",
+    "react-select": "^1.0.0-beta5",
+    "webpack": "^1.12.8"
+  }
+}
