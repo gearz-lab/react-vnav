@@ -33,6 +33,7 @@
     "child-process-promise": "^1.1.0",
     "css-loader": "^0.19.0",
     "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.4",
     "fs-extra-promise": "^0.3.1",
     "json-loader": "^0.5.3",
     "less": "^2.5.3",
