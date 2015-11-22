@@ -8,7 +8,7 @@ var VNav = React.createClass({
      * @returns {XML}
      */
     render: function () {
-        return <div>
+        return <div className="vnav">
             <VNavItem/>
         </div>;
     }

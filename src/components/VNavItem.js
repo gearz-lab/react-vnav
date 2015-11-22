@@ -7,7 +7,7 @@ var VNavItem = React.createClass({
      * @returns {XML}
      */
     render: function () {
-        return <div>bolinha recheada</div>;
+        return <div className="vnav-item">bolinha recheada</div>;
     }
 });
 
