@@ -1,8 +1,23 @@
 .vnav {
-  background-color: @vnav-background-color;
+  background-color: lighten(@vnav-background-color, 4%);
   color: @vnav-color;
 }
 
-.vnav-item {
+.vnav-children-wrapper {
+  padding-left:10px;
+}
 
+.vnav-item {
+  background-color: @vnav-background-color;
+  padding: 10px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #424242;
+}
+
+.vnav-item-text.with-icon {
+  margin-left: 10px;
+}
+
+.vnav-icon {
 }

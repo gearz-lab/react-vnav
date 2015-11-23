@@ -9,7 +9,7 @@ var VNav = React.createClass({
      */
     render: function () {
         return <div className="vnav">
-            <VNavItem/>
+            {this.props.children}
         </div>;
     }
 });

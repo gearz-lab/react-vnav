@@ -1,4 +1,5 @@
 var React = require("react");
+import Icon from './Icon';
 import update from 'react-addons-update';
 
 var VNavItem = React.createClass({
@@ -7,7 +8,22 @@ var VNavItem = React.createClass({
      * @returns {XML}
      */
     render: function () {
-        return <div className="vnav-item">bolinha recheada</div>;
+        let childrenWrapper = null;
+        if(this.props.children) {
+            childrenWrapper = <div className="vnav-children-wrapper">
+                {this.props.children}
+            </div>;
+        }
+
+        let vNavIconTextClass =  this.props.icon ? "vnav-item-text with-icon" : "vnav-item-text";
+
+        return <div className="vnav-item-wrapper">
+                <div className="vnav-item">
+                    {this.props.icon ? <Icon icon={this.props.icon}/> : null }
+                    <span className={vNavIconTextClass}>{this.props.text}</span>
+                </div>
+                {childrenWrapper}
+            </div>
     }
 });
 
