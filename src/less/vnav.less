@@ -1,18 +1,38 @@
 .vnav {
-  background-color: lighten(@vnav-background-color, 4%);
-  color: @vnav-color;
+  background-color: @vnav-background-color;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @vnav-border-color;
+  border-radius: @border-radius-base;
 }
 
 .vnav-children-wrapper {
-  padding-left:10px;
+  padding-left: 10px;
+}
+
+.search-wrapper {
+  padding: 10px;
+}
+
+.search-wrapper .input-group-addon {
+  border-left: 0;
 }
 
 .vnav-item {
-  background-color: @vnav-background-color;
+  background-color: @vnav-item-background-color;
   padding: 10px;
-  border-width: 0 0 1px 0;
+  border-width: 1px 0 0 1px;
   border-style: solid;
-  border-color: #424242;
+  border-color: @vnav-border-color;
+}
+
+// first vnav-items hierarchically
+.children-wrapper > .vnav-item-wrapper > .vnav-item {
+  border-width: 1px 0 0 0;
+}
+
+.children-wrapper > .vnav-item-wrapper:last-child .vnav-item {
+  border-radius: @border-radius-base;
 }
 
 .vnav-item-text.with-icon {
@@ -20,4 +40,10 @@
 }
 
 .vnav-icon {
+}
+
+.vnav-item .plus-wrapper {
+  margin-top: 3px;
+  margin-right: 3px;
+  float: right;
 }

@@ -6,15 +6,16 @@ const Demo = React.createClass({
 
     render: function () {
 
-        return <div style={{width: "300px"}}>
+        return <div style={{width: "300px", margin: 10}}>
                 <VNav>
-                    <VNavItem text="Settings">
-                        <VNavItem text="Customization">
-                            <VNavItem text="Entities" icon="amazon"/>
-                            <VNavItem text="Texts"/>
+                    <VNavItem text="Bookmarks" icon="bookmark"/>
+                    <VNavItem text="Settings" icon="gear">
+                        <VNavItem text="Customization" icon="wrench">
+                            <VNavItem text="Entities" icon="puzzle-piece"/>
+                            <VNavItem text="Localization" icon="location-arrow"/>
                         </VNavItem>
                     </VNavItem>
-                    <VNavItem text="About"/>
+                    <VNavItem text="Feedback" icon="envelope"/>
                 </VNav>
             </div>;
     }
