@@ -6,17 +6,34 @@ const Demo = React.createClass({
 
     render: function () {
 
+        var data = {
+            customization: {
+                display: "Customization",
+                nodes: {
+                    entities: {
+                        display: "Entities",
+                        nodes: {
+                            new: {
+                                display: "New",
+                                route: {
+                                    name: "new",
+                                    params: {
+                                        entity: "entity"
+                                    }
+                                }
+                            },
+                            search: {
+                                display: "search",
+                                icon: "search"
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
         return <div style={{width: "300px", margin: 10}}>
-                <VNav>
-                    <VNavItem text="Bookmarks" icon="bookmark"/>
-                    <VNavItem text="Settings" icon="gear">
-                        <VNavItem text="Customization" icon="wrench">
-                            <VNavItem text="Entities" icon="puzzle-piece"/>
-                            <VNavItem text="Localization" icon="location-arrow"/>
-                        </VNavItem>
-                    </VNavItem>
-                    <VNavItem text="Feedback" icon="envelope"/>
-                </VNav>
+                <VNav nodes={data} />
             </div>;
     }
 });

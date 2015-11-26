@@ -2,6 +2,7 @@ var React = require("react");
 import update from 'react-addons-update';
 import VNavItem from './VNavItem';
 import Icon from './Icon';
+import menuHelper from '../lib/menuHelper.js';
 
 var VNav = React.createClass({
     /**
@@ -19,7 +20,7 @@ var VNav = React.createClass({
 
             </div>
             <div className="children-wrapper">
-                {this.props.children}
+                {menuHelper.createVNavItemsFromNodes(this.props.nodes)}
             </div>
         </div>;
     }

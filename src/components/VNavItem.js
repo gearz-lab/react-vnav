@@ -1,5 +1,6 @@
 var React = require("react");
 import Icon from './Icon';
+import menuHelper from '../lib/menuHelper';
 import update from 'react-addons-update';
 
 var VNavItem = React.createClass({
@@ -11,7 +12,7 @@ var VNavItem = React.createClass({
     },
 
     handleOnClick: function () {
-        if (this.props.children)
+        if (this.props.nodes)
             this.setState({collapsed: !this.state.collapsed});
     },
 
@@ -21,14 +22,14 @@ var VNavItem = React.createClass({
      */
     render: function () {
         let childrenWrapper = null;
-        if (this.props.children && this.state.collapsed === false) {
+        if (this.props.nodes && this.state.collapsed === false) {
             childrenWrapper = <div className="vnav-children-wrapper">
-                {this.props.children}
+                {menuHelper.createVNavItemsFromNodes(this.props.nodes)}
             </div>;
         }
 
         let vNavIconTextClass = this.props.icon ? "vnav-item-text with-icon" : "vnav-item-text";
-        let plusWrapper = this.props.children ? <span className="plus-wrapper">
+        let plusWrapper = this.props.nodes ? <span className="plus-wrapper">
              <Icon icon={this.state.collapsed ? "plus" : "minus"}/>
         </span> : null;
 
