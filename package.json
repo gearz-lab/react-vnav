@@ -64,6 +64,8 @@
   },
   "dependencies": {
     "babel-runtime": "^5.8.25",
+    "clone": "^1.0.2",
+    "deep-freeze": "0.0.1",
     "express": "^4.13.3",
     "font-awesome": "^4.4.0",
     "history": "^1.13.1",
@@ -72,6 +74,7 @@
     "react-dom": "^0.14.3",
     "react-router": "^1.0.0",
     "react-select": "^1.0.0-beta5",
+    "underscore": "^1.8.3",
     "webpack": "^1.12.8"
   }
 }
