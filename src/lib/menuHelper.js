@@ -7,22 +7,25 @@ class MenuHelper {
     /**
      * Creates VNavItems from an Object containing nodes (each property in the nodes object represents a node)
      * @param nodes
+     * @param onItemClick
      * @returns {*}
      */
-    createVNavItemsFromNodes(nodes) {
+    createVNavItemsFromNodes(nodes, onItemClick) {
         if (!nodes) {
             return null;
         }
-        return Object.keys(nodes).map((n, i) => this.createVNavItemFromNode(nodes[n], i));
+        return Object.keys(nodes).map((n, i) => this.createVNavItemFromNode(nodes[n], i, onItemClick));
     }
 
     /**
      * Creates a VNavItem from a JSON node
      * @param node
+     * @param key
+     * @param onItemClick
      * @returns {XML}
      */
-    createVNavItemFromNode(node, key) {
-        return <VNavItem text={node.display} icon={node.icon} key={key} nodes={node.nodes}/>
+    createVNavItemFromNode(node, key, onItemClick) {
+        return <VNavItem key={key} node={node} onClick={onItemClick}/>
     }
 
     /**
@@ -50,9 +53,9 @@ class MenuHelper {
         if (node.display.match(new RegExp(filterString, 'i'))) {
             return node;
         }
-        else if(node.nodes) {
+        else if (node.nodes) {
             let filteredChildren = this.filterNodes(node.nodes, filterString);
-            if(Object.keys(filteredChildren).length) {
+            if (Object.keys(filteredChildren).length) {
                 node.nodes = filteredChildren;
                 return node;
             }

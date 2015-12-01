@@ -1,8 +1,27 @@
 import React from 'react';
 import VNav from '../../src/components/VNav';
 import VNavItem from '../../src/components/VNavItem';
+import NotificationSystem from 'react-notification-system';
 
 const Demo = React.createClass({
+
+    _notificationSystem: null,
+
+    _addNotification: function(event) {
+        event.preventDefault();
+        this._notificationSystem.addNotification({
+            message: 'Notification message',
+            level: 'success'
+        });
+    },
+
+    componentDidMount: function() {
+        this._notificationSystem = this.refs.notificationSystem;
+    },
+
+    handleItemClick(node) {
+        console.log(node);
+    },
 
     render: function () {
 
@@ -33,7 +52,8 @@ const Demo = React.createClass({
         };
 
         return <div style={{width: "300px", margin: 10}}>
-                <VNav nodes={data} />
+                <VNav nodes={data} onItemClick={this.handleItemClick} />
+                <NotificationSystem ref="notificationSystem" />
             </div>;
     }
 });

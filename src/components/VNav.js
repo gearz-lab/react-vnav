@@ -8,6 +8,12 @@ import clone from 'clone';
 
 var VNav = React.createClass({
 
+    PropTypes: {
+        clearSearchText: React.PropTypes.string,
+        nodes: React.PropTypes.object.isRequired,
+        onItemClick: React.PropTypes.func
+    },
+
     getDefaultProps: function () {
         return {
             clearSearchText: "Clear search"
@@ -25,8 +31,8 @@ var VNav = React.createClass({
         this.setState({search: event.target.value});
     },
 
-    handlerClearSearch: function(event) {
-        this.setState({search: null}, function() {
+    handlerClearSearch: function (event) {
+        this.setState({search: null}, function () {
             ReactDOM.findDOMNode(this.refs.searchInput).focus();
         });
     },
@@ -42,15 +48,16 @@ var VNav = React.createClass({
 
         let searchClearer = this.state.search ? <div className="search-clearer">
             {this.props.clearSearchText}
-            <div className="search-clearer-button pull-right" onClick={this.handlerClearSearch} >
-                <i className="fa fa-close" ></i>
+            <div className="search-clearer-button pull-right" onClick={this.handlerClearSearch}>
+                <i className="fa fa-close"></i>
             </div>
         </div> : null;
 
         return <div className="vnav">
             <div className="search-wrapper">
                 <div className="input-group">
-                    <input ref="searchInput" type="text" className="form-control" placeholder="Filter" onChange={this.handleTextChange} value={this.state.search}/>
+                    <input ref="searchInput" type="text" className="form-control" placeholder="Filter"
+                           onChange={this.handleTextChange} value={this.state.search}/>
                     <span className="input-group-addon"><Icon icon="search"/></span>
                     <span className="input-group-addon"><Icon icon="gear"/></span>
                 </div>
@@ -60,7 +67,7 @@ var VNav = React.createClass({
                 {searchClearer}
             </div>
             <div className="children-wrapper">
-                {menuHelper.createVNavItemsFromNodes(nodes)}
+                {menuHelper.createVNavItemsFromNodes(nodes, this.props.onItemClick)}
             </div>
         </div>;
     }
