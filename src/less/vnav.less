@@ -14,13 +14,28 @@
   padding: 10px;
 }
 
+.search-clearer {
+  background-color: @alert-warning-bg;
+  border-color: @alert-warning-border;
+  border-width: 1px;
+  border-style: solid;
+  color: @state-warning-text;
+  padding: @padding-base-vertical @padding-large-horizontal;
+}
+
+.search-clearer i.fa {
+  margin-top: 3px;
+  float: right;
+  cursor: pointer;
+}
+
 .search-wrapper .input-group-addon {
   border-left: 0;
 }
 
 .vnav-item {
   background-color: @vnav-item-background-color;
-  padding: 10px;
+  padding: @padding-base-vertical @padding-large-horizontal;
   border-width: 1px 0 0 1px;
   border-style: solid;
   border-color: @vnav-border-color;
@@ -49,6 +64,5 @@
 
 .vnav-item .plus-wrapper {
   margin-top: 3px;
-  margin-right: 3px;
   float: right;
 }
