@@ -11,7 +11,8 @@ var VNav = React.createClass({
     PropTypes: {
         clearSearchText: React.PropTypes.string,
         nodes: React.PropTypes.object.isRequired,
-        onItemClick: React.PropTypes.func
+        onItemClick: React.PropTypes.func,
+        searchBarButtons: React.PropTypes.array
     },
 
     getDefaultProps: function () {
@@ -53,15 +54,23 @@ var VNav = React.createClass({
             </div>
         </div> : null;
 
+        let input = <input ref="searchInput" type="text" className="form-control" placeholder="Filter"
+                           onChange={this.handleTextChange} value={this.state.search}/>;
+
+        let inputGroup = this.props.searchBarButtons ?
+            <div className="input-group">
+                {input}
+                {this.props.searchBarButtons.map((b, i) => {
+                    return <span key={i} className="input-group-addon" onClick={e => b.onClick(b.id, e)}>
+                        <Icon icon={b.icon} />
+                    </span>
+                })}
+            </div>
+            : input;
+
         return <div className="vnav">
             <div className="search-wrapper">
-                <div className="input-group">
-                    <input ref="searchInput" type="text" className="form-control" placeholder="Filter"
-                           onChange={this.handleTextChange} value={this.state.search}/>
-                    <span className="input-group-addon"><Icon icon="search"/></span>
-                    <span className="input-group-addon"><Icon icon="gear"/></span>
-                </div>
-
+                { inputGroup }
             </div>
             <div className="search-clearer-wrapper">
                 {searchClearer}

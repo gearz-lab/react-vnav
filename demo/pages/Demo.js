@@ -48,7 +48,11 @@ const Demo = React.createClass({
         };
 
         return <div style={{width: "300px", margin: 10}}>
-            <VNav nodes={data} onItemClick={this.handleItemClick}/>
+            <VNav nodes={data} onItemClick={this.handleItemClick} searchBarButtons={[{
+            id: 'options',
+            icon: "gear",
+            onClick: function(id, event) { console.log(id); }
+            }]}/>
             <NotificationSystem ref="notificationSystem" />
         </div>;
     }
