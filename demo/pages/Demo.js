@@ -22,14 +22,31 @@ const Demo = React.createClass({
     render: function () {
 
         var data = {
+            contacts: {
+                display: "Contacts",
+                icon: "user",
+                nodes: {
+                    newContact: {
+                        display: "New contact",
+                        icon: "user-plus"
+                    },
+                    search: {
+                        display: "Search contacts",
+                        icon: "search"
+                    }
+                }
+            },
             customization: {
                 display: "Customization",
+                icon: "wrench",
                 nodes: {
                     entities: {
                         display: "Entities",
+                        icon: "database",
                         nodes: {
                             new: {
-                                display: "New",
+                                display: "New entity",
+                                icon: "plus",
                                 route: {
                                     name: "new",
                                     params: {
@@ -38,7 +55,7 @@ const Demo = React.createClass({
                                 }
                             },
                             search: {
-                                display: "search",
+                                display: "Search entities",
                                 icon: "search"
                             }
                         }

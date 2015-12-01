@@ -7,6 +7,6 @@ import {Route} from 'react-router';
 
 export default (
     <Route path='/' component={Root}>
-        <Route path='/react-metaform/demo.html' component={Demo}/>
+        <Route path='/react-vnav/demo.html' component={Demo}/>
     </Route>
 )
