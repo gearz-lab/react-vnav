@@ -7,20 +7,16 @@ const Demo = React.createClass({
 
     _notificationSystem: null,
 
-    _addNotification: function(event) {
-        event.preventDefault();
+    handleItemClick: function (node) {
         this._notificationSystem.addNotification({
-            message: 'Notification message',
+            title: `You clicked on ${node.display}`,
+            message: JSON.stringify(node),
             level: 'success'
         });
     },
 
-    componentDidMount: function() {
+    componentDidMount: function () {
         this._notificationSystem = this.refs.notificationSystem;
-    },
-
-    handleItemClick(node) {
-        console.log(node);
     },
 
     render: function () {
@@ -52,9 +48,9 @@ const Demo = React.createClass({
         };
 
         return <div style={{width: "300px", margin: 10}}>
-                <VNav nodes={data} onItemClick={this.handleItemClick} />
-                <NotificationSystem ref="notificationSystem" />
-            </div>;
+            <VNav nodes={data} onItemClick={this.handleItemClick}/>
+            <NotificationSystem ref="notificationSystem" />
+        </div>;
     }
 });
 
