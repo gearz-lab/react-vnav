@@ -3,6 +3,16 @@ React-vnav
 
 `React-vnav` is a [React](https://facebook.github.io/react/) library for building vertical main menus.
 
+React-vnav is under active development. APIs might change. Features that will probably be introduced until version 1.0:
+
+ - Search highlight
+ - Keyboard navigation
+ - Better integration with react-router. Today, routing must be done manually listening for node click events
+ - Ability to mark active menu item automatically based on react-router
+ - Drag and drop
+ - Built in button for creating folders
+ - Remove dependency on bootstrap and font-awesome LESS files
+
 Demo
 ---
 
