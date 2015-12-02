@@ -65,3 +65,25 @@ Currently `react-vnav` requires the `bootstrap` and the `font-awesome` less file
     @import 'bootstrap/less/bootstrap';
     @import 'font-awesome/less/font-awesome';
     @import 'react-vnav/less/vnav.less';
+    
+
+Contributing
+---
+
+**Pull-requests are really really welcome**.
+ 
+I'll be more than glad to invite frequent contributors to join the organization.
+If you need help understanding the project, please post an issue and I'll do my best to reply and make sure you understand everything
+you need.
+
+In order to make a pull request:
+
+ 1. Fork it.
+ 2. Create your feature-branch git checkout -b your-new-feature-branch
+ 3. Commit your change git commit -am 'Add new feature'
+ 4. Push to the branch git push origin your-new-feature-branch
+ 5. Create new Pull Request with master branch
+
+License
+---
+`React-metaform` is [MIT](https://github.com/gearz-lab/react-vnav/blob/master/LICENSE) licensed.
