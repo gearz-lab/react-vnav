@@ -86,4 +86,4 @@ In order to make a pull request:
 
 License
 ---
-`React-metaform` is [MIT](https://github.com/gearz-lab/react-vnav/blob/master/LICENSE) licensed.
+`React-vnav` is [MIT](https://github.com/gearz-lab/react-vnav/blob/master/LICENSE) licensed.
