@@ -56,3 +56,12 @@ nodes | Object | A JavaScript that describes the nodes. Each property in the obj
 clearSearchText | string | The text to be displayed next to the "clear search" button
 onItemClick | function | Function that will be called when an item is clicked
 searchBarButtons | array | Array of buttons that will be placed next to the search input. Each item of the array is a JavaScript object. Each object has the following properties: `icon`: The font-awesome icon. `onClick`: The function that will be called when the button is clicked.
+
+Adding the styles
+---
+
+Currently `react-vnav` requires the `bootstrap` and the `font-awesome` less files to be included.
+
+    @import 'bootstrap/less/bootstrap';
+    @import 'font-awesome/less/font-awesome';
+    @import 'react-vnav/less/vnav.less';
