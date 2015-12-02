@@ -3,6 +3,8 @@ React-vnav
 
 `React-vnav` is a [React](https://facebook.github.io/react/) library for building vertical main menus.
 
+![animation](https://github.com/gearz-lab/react-vnav/blob/gh-pages/Animation.gif)
+
 React-vnav is under active development. APIs might change. Features:
 
  - Search
