@@ -85,6 +85,7 @@ Currently `react-vnav` requires the `bootstrap` and the `font-awesome` less file
     @import 'react-vnav/less/vnav.less';
 
 Running the demo locally
+---
 
 **In development mode**
 
