@@ -44,7 +44,7 @@ if (development) {
         });
 } else {
     app = app
-        .use(express.static(path.join(__dirname, '../demo-built')));
+        .use('/react-vnav', express.static(path.join(__dirname, '../demo-built')));
 }
 
 app

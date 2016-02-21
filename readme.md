@@ -83,7 +83,21 @@ Currently `react-vnav` requires the `bootstrap` and the `font-awesome` less file
     @import 'bootstrap/less/bootstrap';
     @import 'font-awesome/less/font-awesome';
     @import 'react-vnav/less/vnav.less';
-    
+
+Running the demo locally
+
+**In development mode**
+
+ - Open 2 console windows. Make sure you your `NODE_ENV` is `development` on both consoles. On Windows, you should type `SET NODE_ENV=development`. On OSX and Linux, this should be `export NODE_ENV=development`.
+ - On the first one, type `npm run wpds`. On the second, type `npm run start-demo`.
+ - The demo is available at: `http://localhost:4000/react-vnav/demo.html`.
+ 
+**In production mode**
+
+ - Open 1 console window
+ - Type `npm run build-demo`. Now there should be a folder called `demo-built`.
+ - Type `npm run start-demo`.
+ - The demo is available at: `http://localhost:4000/react-vnav/demo.html`. 
 
 Contributing
 ---

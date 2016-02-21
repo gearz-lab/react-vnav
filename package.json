@@ -1,6 +1,6 @@
 {
   "name": "react-vnav",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A React menu component compatible with react-router",
   "main": "lib/index.js",
   "scripts": {
@@ -37,7 +37,6 @@
     "child-process-promise": "^1.1.0",
     "css-loader": "^0.19.0",
     "es5-shim": "^4.3.1",
-    "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
     "fs-extra-promise": "^0.3.1",
@@ -63,14 +62,21 @@
     "react-notification-system": "^0.2.6",
     "rimraf-promise": "^2.0.0",
     "style-loader": "^0.12.3",
-    "webpack-dev-server": "^1.12.1",
-    "webpack": "^1.12.8"
+    "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.25"
-  },
-  "peerDependencies": {
-    "react": ">=0.14.0",
-    "react-dom": ">=0.14.0"
+    "babel-runtime": "^5.8.25",
+    "clone": "^1.0.2",
+    "deep-freeze": "0.0.1",
+    "express": "^4.13.3",
+    "font-awesome": "^4.4.0",
+    "history": "^1.13.1",
+    "react": "^0.14.3",
+    "react-addons-update": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.0",
+    "react-select": "^1.0.0-beta5",
+    "underscore": "^1.8.3",
+    "webpack": "^1.12.8"
   }
 }
