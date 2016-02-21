@@ -2,7 +2,7 @@
   "name": "react-vnav",
   "version": "0.1.0",
   "description": "A React menu component compatible with react-router",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build-demo": "babel-node ./tools/build-demo.js",
     "build-lib": "babel-node ./tools/build-lib.js",
